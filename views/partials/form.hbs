@@ -1,0 +1,185 @@
+<div class="checkout">
+  <div class="shipping">
+    <h2 class="shipping__heading">1. Shipping Info</h2>
+    <form id="stripe-form" action="/charge" method="post">
+      <div class="shipping__details">
+        <div class="shipping__input-wrapper" id="g-1" >
+          <label class="shipping__label">
+            <span class="shipping__span">First name</span>
+            <input class="in shipping__input" id="first-name" type="text" name="firstName">
+          </label>
+        </div>
+        <div class="shipping__input-wrapper" id="g-2">
+          <label class="shipping__label">
+            <span class="shipping__span">Last name</span>
+            <input class="in shipping__input" id="last-name" type="text" name="lastName">
+          </label>
+        </div>
+        <div class="shipping__input-wrapper" id="g-3">
+          <label class="shipping__label">
+            <span class="shipping__span">Address</span>
+            <input class="in shipping__input" id="address-line-1" type="text" name="addressLine1">
+          </label>
+        </div>
+        <div class="shipping__input-wrapper" id="g-4">
+          <label class="shipping__label">
+            <span class="shipping__span">Address 2</span>
+            <input class="in shipping__input" id="address-line-2" type="text" name="addressLine2">
+          </label>
+        </div>
+        <div class="shipping__input-wrapper" id="g-5">
+          <label class="shipping__label">
+            <span class="shipping__span">City</span>
+            <input class="in shipping__input" id="city" type="text" name="city">
+          </label>
+        </div>
+        <div class="shipping__input-wrapper" id="g-6">
+          <label class="shipping__label">
+            <span class="shipping__label-title">Country</span>
+            <select class="shipping__select" id="country" type="text" name="country">
+              <option class="shipping__option" value="Austria">Austria</option>
+              <option class="shipping__option" value="Belgium">Belgium</option>
+              <option class="shipping__option" value="Bulgaria">Bulgaria</option>
+              <option class="shipping__option" value="Canada">Canada</option>
+              <option class="shipping__option" value="Croatia">Croatia</option>
+              <option class="shipping__option" value="Cyprus">Cyprus</option>
+              <option class="shipping__option" value="Czechia">Czechia</option>
+              <option class="shipping__option" value="Denmark">Denmark</option>
+              <option class="shipping__option" value="Estonia">Estonia</option>
+              <option class="shipping__option" value="Finland">Finland</option>
+              <option class="shipping__option" value="France">France</option>
+              <option class="shipping__option" value="Germany">Germany</option>
+              <option class="shipping__option" value="Greece">Greece</option>
+              <option class="shipping__option" value="Mexico">Mexico</option>
+              <option class="shipping__option" value="Hungary">Hungary</option>
+              <option class="shipping__option" value="Ireland">Ireland</option>
+              <option class="shipping__option" value="Italy">Italy</option>
+              <option class="shipping__option" value="Latvia">Latvia</option>
+              <option class="shipping__option" value="Lithuania">Lithuania</option>
+              <option class="shipping__option" value="Luxembourg">Luxembourg</option>
+              <option class="shipping__option" value="Malta">Malta</option>
+              <option class="shipping__option" value="Netherlands">Netherlands</option>
+              <option class="shipping__option" value="Poland">Poland</option>
+              <option class="shipping__option" value="Portugal">Portugal</option>
+              <option class="shipping__option" value="Romania">Romania</option>
+              <option class="shipping__option" value="Slovakia">Slovakia</option>
+              <option class="shipping__option" value="Slovenia">Slovenia</option>
+              <option class="shipping__option" value="Spain">Spain</option>
+              <option class="shipping__option" value="Sweden">Sweden</option>
+              <option class="shipping__option" value="United Kingdom">United Kingdom</option>
+              <option class="shipping__option" value="United States" selected="selected">United States</option>
+            </select>
+          </label>
+        </div>
+        <div class="shipping__input-wrapper" id="g-7">
+          <label class="shipping__label">
+            <span class="shipping__label-title">State</span>
+            <select class="shipping__select" id="state" type="text" name="state">
+              <option class="shipping__option" value="Alabama">Alabama</option>
+              <option class="shipping__option" value="Alaska">Alaska</option>
+              <option class="shipping__option" value="Arizona">Arizona</option>
+              <option class="shipping__option" value="Arkansas">Arkansas</option>
+              <option class="shipping__option" value="California">California</option>
+              <option class="shipping__option" value="Colorado">Colorado</option>
+              <option class="shipping__option" value="Connecticut">Connecticut</option>
+              <option class="shipping__option" value="Delaware">Delaware</option>
+              <option class="shipping__option" value="Florida">Florida</option>
+              <option class="shipping__option" value="Georgia">Georgia</option>
+              <option class="shipping__option" value="Hawaii">Hawaii</option>
+              <option class="shipping__option" value="Idaho">Idaho</option>
+              <option class="shipping__option" value="Illinois">Illinois</option>
+              <option class="shipping__option" value="Indiana">Indiana</option>
+              <option class="shipping__option" value="Iowa">Iowa</option>
+              <option class="shipping__option" value="Kansas">Kansas</option>
+              <option class="shipping__option" value="Kentucky">Kentucky</option>
+              <option class="shipping__option" value="Louisiana">Louisiana</option>
+              <option class="shipping__option" value="Maine">Maine</option>
+              <option class="shipping__option" value="Maryland">Maryland</option>
+              <option class="shipping__option" value="Massachusetts">Massachusetts</option>
+              <option class="shipping__option" value="Michigan">Michigan</option>
+              <option class="shipping__option" value="Minnesota">Minnesota</option>
+              <option class="shipping__option" value="Mississippi">Mississippi</option>
+              <option class="shipping__option" value="Missouri">Missouri</option>
+              <option class="shipping__option" value="Montana">Montana</option>
+              <option class="shipping__option" value="Nebraska">Nebraska</option>
+              <option class="shipping__option" value="Nevada">Nevada</option>
+              <option class="shipping__option" value="New Hampshire">New Hampshire</option>
+              <option class="shipping__option" value="New Jersey">New Jersey</option>
+              <option class="shipping__option" value="New Mexico">New Mexico</option>
+              <option class="shipping__option" value="New York">New York</option>
+              <option class="shipping__option" value="North Carolina">North Carolina</option>
+              <option class="shipping__option" value="North Dakota">North Dakota</option>
+              <option class="shipping__option" value="Ohio">Ohio</option>
+              <option class="shipping__option" value="Oklahoma">Oklahoma</option>
+              <option class="shipping__option" value="Oregon">Oregon</option>
+              <option class="shipping__option" value="Pennsylvania">Pennsylvania</option>
+              <option class="shipping__option" value="Rhode Island">Rhode Island</option>
+              <option class="shipping__option" value="South Carolina">South Carolina</option>
+              <option class="shipping__option" value="South Dakota">South Dakota</option>
+              <option class="shipping__option" value="Tennessee">Tennessee</option>
+              <option class="shipping__option" value="Texas">Texas</option>
+              <option class="shipping__option" value="Utah">Utah</option>
+              <option class="shipping__option" value="Vermont">Vermont</option>
+              <option class="shipping__option" value="Virginia">Virginia</option>
+              <option class="shipping__option" value="Washington">Washington</option>
+              <option class="shipping__option" value="West Virginia">West Virginia</option>
+              <option class="shipping__option" value="Wisconsin">Wisconsin</option>
+              <option class="shipping__option" value="Wyoming">Wyoming</option>
+            </select>
+          </label>
+        </div>
+        <div class="shipping__input-wrapper" id="g-8">
+          <label class="shipping__label">
+            <span class="shipping__span">Postal code</span>
+            <input class="in shipping__input" id="postal-code" type="text" name="postalCode">
+          </label>
+        </div>
+        <div class="shipping__input-wrapper" id="g-9">
+          <label class="shipping__label">
+            <span class="shipping__span">Email</span>
+            <input class="in shipping__input" id="email" type="text" name="email">
+          </label>
+        </div>
+        <div class="shipping__input-wrapper" id="g-10">
+          <label class="shipping__label">
+            <span class="shipping__span">Phone</span>
+            <input class="in shipping__input" id="phone" type="text" name="phone">
+          </label>
+        </div>
+      </div>
+      <div class="billing">
+        <h2 class="billing__heading">2. Billing Info</h2>
+        <img class="billing__stripe-logo" src="../images/stripe-light.png">
+        <div id="card-element"></div>
+        <div class="button__wrapper" id="button-wrapper">
+          <button class="checkout__button" id="stripe-button" name="checkout-button">Place Order</button>
+          <div id="ghost"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="summary">
+    <div class="summary__line-item__tall">
+      <span class="summary__line-item__title">Review Order</span>
+    </div>
+    <div class="summary__line-item__short">
+      <span class="summary__line-item__type">Promo Code: {{promo}}</span>
+    </div>
+    <div class="summary__line-item__short">
+      <span class="summary__line-item__type">Subtotal</span>
+      <span class="summary__line-item__price">${{subtotal}}</span>
+    </div>
+    <div class="summary__line-item__short">
+      <span class="summary__line-item__type">Sales Tax</span>
+      <span class="summary__line-item__price">$0</span>
+    </div>
+    <div class="summary__line-item__short">
+      <span class="summary__line-item__type">Shipping</span>
+      <span class="summary__line-item__price">${{shipping}}</span>
+    </div>
+    <div class="summary__line-item__short">
+      <span class="summary__line-item__type">Total</span>
+      <span class="summary__line-item__price">${{total}}</span>
+    </div>
+  </div>
+</div>

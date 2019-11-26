@@ -1,0 +1,16 @@
+.slide__wrapper.team {
+  bottom: 20rem;
+  left: 20rem;
+}
+
+.swiper-slide.team {
+  @include bg-image('checkers-purple.png');
+}
+
+@media (max-width: $tablet) {
+  .slide__wrapper.team {
+    @include center-x;
+    bottom: 10rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,112 @@
+.invoice {
+  margin: 18rem 0 10rem 0;
+}
+
+.invoice__card {
+  display: grid;
+  max-width: 64rem;
+  margin: 0 auto;
+  grid-column-start: 1;
+  grid-template-columns: 22rem auto;
+}
+
+.invoice__details {
+  @include rob-con-14;
+  max-width: 64rem;
+  margin: 10rem auto 0.1rem auto;
+  padding: 0 1rem;
+  color: white;
+}
+
+.invoice__heading {
+  @include kai-24;
+  margin: 0.1rem 0;
+  color: white;
+  text-align: center;
+}
+
+.invoice__image {
+  display: block;
+  max-width: 22rem;
+}
+
+.invoice__deetz {
+  margin: 2rem 0;
+}
+
+.invoice__shipping {
+  margin: 2rem 0;
+}
+
+.invoice__list-item {
+  list-style-type: none;
+}
+
+.invoice__message {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.item__attribute {
+  font-weight: 700;
+  list-style-type: none;
+}
+
+.item__attributes {
+  @include rob-con-12;
+  margin: 1rem 0;
+  color: $rgb30;
+}
+
+.item__info {
+  position: relative;
+  padding: 2rem;
+  background: $rgb240;
+}
+
+.item__name {
+  @include kai-18;
+  color: $rgb30;
+}
+
+.item__price {
+  @include kai-18;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.order__info {
+  position: relative;
+  padding: 2rem;
+
+  span {
+    display: block;
+    color: $rgb30;
+  }
+}
+
+.shipping {
+  position: absolute;
+  right: 2rem;
+}
+
+.subtotal {
+  position: absolute;
+  right: 2rem;
+}
+
+.total {
+  position: absolute;
+  right: 2rem;
+}
+
+@media (max-width: $mobile) {
+  .item__name {
+    font-size: 1.4rem;
+  }
+
+  .item__price {
+    font-size: 1.4rem;
+  }
+}

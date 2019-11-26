@@ -1,0 +1,50 @@
+<div class="invoice">
+  <div class="invoice__details">
+    <h2 class="invoice__heading">Your order has been placed.</h2>
+    <p class="invoice__message">A copy of your invoice has been sent to <b>{{recipient}}</b></p>
+    <ul class="invoice__deetz">
+      <li class="invoice__list-item">Order number: <b>{{orderNumber}}</b></li>
+      <li class="invoice__list-item">Order date: {{orderDate}}</li>
+    </ul>
+    <ul class="invoice__shipping">
+      <li class="invoice__list-item">Shipping to:</li>
+      <li class="invoice__list-item">{{name}}</li>
+      <li class="invoice__list-item">{{addressLine1}}</li>
+      {{#if addressLine2}}
+        <li class="invoice__list-item">{{addressLine2}}</li>
+      {{/if}}
+      {{#if state}}
+        <li class="invoice__list-item">{{city}}, {{state}} {{postalCode}}</li>
+      {{else}}
+        <li class="invoice__list-item">{{city}} {{postalCode}}</li>
+      {{/if}} 
+      <li class="invoice__list-item">{{country}}</li>
+    </ul>
+  </div>
+  {{#if products}}
+    <div class="invoice__summary">
+      <div class="invoice__cards">
+        {{#each products}}
+          <div class="invoice__card">
+            <div>
+              <a href="{{this.item.url}}"><img class="invoice__image" src="{{this.item.image}}" alt=""></a>
+            </div>
+            <div class="item__info">
+              <span class="item__name">{{this.item.name}}</span>
+              <ul class="item__attributes">
+                <li class="item__attribute">Color: Black</li>
+                <li class="item__attribute">Size: {{this.item.size}}</li>
+                <li class="item__attribute">Qty: {{this.qty}}</li>
+              </ul>
+              <span class="item__price">${{this.total}}</span>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+  <ul class="invoice__totals">
+    <li class="invoice__list-item">{{subtotal}}</li>
+    <li class="invoice__list-item">{{total}}</li>
+  </ul>
+</div>

@@ -1,0 +1,69 @@
+.mailing-list {
+  position: relative;
+  width: 100%;
+  height: 32rem;
+  background: $rgb20;
+}
+
+.mailing-list__button {
+  @include kai-18;
+  position: absolute;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  background: $rgb255;
+  border: 0.1rem solid $rgb255;
+  color: $rgb20;
+  cursor: pointer;
+}
+
+.mailing-list__form {
+  @include center-xy;
+  display: flex;
+  top: calc(50% + 3.5rem);
+  text-align: center;
+}
+
+.mailing-list__form::placeholder {
+  color: $rgb255;
+  opacity: 0.75;
+}
+
+.mailing-list__ghost {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.mailing-list__heading {
+  @include center-xy;
+  @include kai-24;
+  top: calc(50% - 3.5rem);
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.mailing-list__input {
+  @include rob-con-14;
+  width: 25rem;
+  height: 4rem;
+  padding-right: 5rem;
+  background: $rgb20;
+  border: 0.1rem solid $rgb255;
+  color: white;
+  text-indent: 1rem;
+}
+
+@media (max-width: $mobile) {
+  .mailing-list__input {
+    top: calc(50% + 3rem);
+  }
+
+  .mailing-list__title {
+    top: calc(50% - 3rem);
+  }
+}

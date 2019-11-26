@@ -1,0 +1,12 @@
+@import 'mixins';
+@import 'variables';
+
+#card-element {
+  margin-bottom: 1rem;
+  background: $rgb20;
+}
+
+.StripeElement {
+  padding-left: 1rem;
+  border-radius: 0.1rem;
+}

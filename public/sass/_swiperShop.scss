@@ -1,0 +1,18 @@
+.slide__wrapper.shop {
+  right: 20rem;
+  bottom: 20rem;
+  text-align: right;
+}
+
+.swiper-slide.shop {
+  @include bg-image('checkers-green.png');
+}
+
+@media (max-width: $tablet) {
+  .slide__wrapper.shop {
+    @include center-x;
+    right: auto;
+    bottom: 10rem;
+    text-align: center;
+  }
+}

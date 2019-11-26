@@ -1,0 +1,74 @@
+.summary {
+  background: $rgb20;
+  color: white;
+}
+
+.summary__arrow {
+  @include bg-image('arrow.svg');
+  display: inline-block;
+  position: relative;
+  top: 0.5rem;
+  left: -0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-position: center;
+  background-size: 1rem 1rem;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.summary__promo-button {
+  @include kai-18;
+  background: $rgb240;
+  border-radius: 0.1rem;
+  color: $rgb20;
+}
+
+.summary__promo-form {
+  display: grid;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  grid-template-columns: 1fr 6rem;
+}
+
+.summary__promo-input {
+  @include kai-18;
+  width: 100%;
+  height: 3.6rem;
+  background: $rgb40;
+  border: 0;
+  border-radius: 0.1rem;
+  border-radius: 0.1rem;
+  color: $rgb255;
+  text-indent: 1rem;
+}
+
+.summary__line-item__price {
+  @include kai-18;
+  position: absolute;
+  right: 2rem;
+}
+
+.summary__line-item__short {
+  position: relative;
+  height: 6rem;
+  line-height: 6rem;
+  border-bottom: 0.1rem solid $rgb30;
+}
+
+.summary__line-item__tall {
+  position: relative;
+  height: 8rem;
+  line-height: 8rem;
+  border-bottom: 0.1rem solid $rgb30;
+}
+
+.summary__line-item__title {
+  @include kai-24;
+  margin: 0 1rem 0 2rem;
+}
+
+.summary__line-item__type {
+  @include kai-18;
+  margin: 0 1rem 0 2rem;
+}

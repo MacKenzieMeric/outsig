@@ -1,0 +1,15 @@
+<div class="member__wrapper">
+  {{#each athlete}}
+    <div class="member">
+      <img class="member__image" src={{this.image}}>
+      <div class="member__info">
+        <span class="member__font-big member__name">{{this.name}}</span>
+        <span class="member__font-small member__location">{{this.location}} <img class="member__flag" src={{this.flag}}></span>
+        <span class="member__font-small member__age">{{this.age}}</span>
+        <span class="member__font-small member__height">{{this.height}}</span>
+        <span class="member__font-small member__weight">{{this.weight}}</span>
+      </div>
+    </div>
+  {{/each}}
+</div>
+  

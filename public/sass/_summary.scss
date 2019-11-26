@@ -1,0 +1,244 @@
+.bag {
+  display: grid;
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto 10rem auto;
+  align-items: start;
+  grid-template-columns: 2fr 1fr;
+}
+
+.remove__button {
+  @include kai-12;
+  display: block;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 5rem;
+  height: 2.5rem;
+  background: $rgb40;
+  border: 0;
+  border-radius: 0.1rem;
+  color: $rgb255;
+  cursor: pointer;
+
+  a {
+    @include a;
+  }
+}
+
+.checkout__button {
+  @include kai-18;
+  display: block;
+  width: 100%;
+  height: 4rem;
+  margin: 0 auto;
+  background: $teal;
+  border: 0;
+  border-radius: 0.1rem;
+  color: white;
+  cursor: pointer; // FIXME: Add to Mixin.
+  transition: 100ms;
+}
+
+.checkout__button:hover {
+  background: $tealActive;
+  transition: 100ms;
+}
+
+.checkout__form {
+  padding: 2rem;
+}
+
+.counter__button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: $rgb40;
+}
+
+.counter__input {
+  width: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: $rgb240;
+  border: none;
+  color: black;
+  text-align: center;
+}
+
+.counter__options {
+  @include kai-12;
+  display: flex;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  width: 7.5rem;
+  height: 2.5rem;
+}
+
+.counter__plus-minus {
+  color: $rgb240;
+}
+
+.empty {
+  position: relative;
+  height: 36rem;
+  background: $rgb40;
+  text-align: center;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.item {
+  display: grid;
+  max-width: 64rem;
+  background: $rgb240;
+  grid-column-start: 1;
+  grid-template-columns: 22rem auto;
+}
+
+.item__attribute {
+  @include rob-con-12;
+  font-weight: 700;
+  color: $rgb0;
+  list-style-type: none;
+}
+
+.item__image {
+  display: block;
+  max-width: 22rem;
+}
+
+.item__info {
+  position: relative;
+  padding: 2rem;
+}
+
+.item__name {
+  @include kai-18;
+  display: block;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.item__price {
+  @include kai-18;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: $rgb40;
+}
+
+.pad {
+  padding: 2rem;
+}
+
+#quantity {
+  position: relative;
+  top: 4rem;
+  width: 5rem;
+  height: 2.5rem;
+}
+
+.remove__bin {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  font-size: 2.5rem;
+  background: none;
+  border: 0;
+  color: $rgb30;
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+  transition: 100ms;
+}
+
+.teal__link {
+  color: $teal;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media (max-width: $tablet) {
+  .bag {
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: $mobile) {
+  .bag {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .item__image {
+    width: 100%;
+    max-width: 32rem;
+  }
+
+  .item__name {
+    font-size: 1.6rem;
+  }
+
+  .item__price {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bag {
+    margin: 0 auto;
+  }
+
+  .counter__button {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .counter__input {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .counter__options {
+    bottom: 2rem;
+    left: 2rem;
+    width: 6rem;
+    height: 2rem;
+  }
+
+  .item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .remove__bin {
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .remove__button {
+    right: 1rem;
+    bottom: 1rem;
+    width: 4rem;
+    height: 2rem;
+  }
+}

@@ -1,0 +1,11 @@
+.banner {
+  @include bg-image('checkers-purple.png');
+  max-width: 192rem;
+  height: 36rem;
+}
+
+@media (max-width: $mobile) {
+  .banner {
+    height: 100vw;
+  }
+}

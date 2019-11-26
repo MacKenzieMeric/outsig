@@ -1,0 +1,71 @@
+.copyright__title {
+  @include kai-12;
+  color: white;
+}
+
+.copyright__year {
+  @include rob-con-12;
+  color: white;
+}
+
+footer {
+  width: 100%;
+  padding: 4rem 0 1rem 0;
+  background: $rgb30;
+  text-align: center;
+}
+
+.sub-menu {
+  display: grid;
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sub-menu__line {
+  width: 12.5rem;
+  height: 0.1rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  background: $rgb255;
+  opacity: 0.1;
+}
+
+.sub-menu__link {
+  @include kai-14;
+  margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sub-menu__item {
+  margin-bottom: 4rem;
+  font-size: 0;
+  text-align: center;
+}
+
+.sub-menu__media {
+  margin: 0 0.5rem 0 0.5rem;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.sub-menu__title {
+  @include kai-18;
+  margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: $mobile) {
+  .sub-menu {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sub-menu__item--hide {
+    display: none;
+  }
+}

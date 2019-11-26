@@ -1,0 +1,130 @@
+@import 'variables';
+
+@mixin a {
+  color: $rgb255;
+  text-decoration: none;
+}
+
+@mixin bg-image($path) {
+  background: {
+    position: center;
+    image: url(#{$imagesDir}#{$path});
+    repeat: no-repeat;
+  }
+}
+
+@mixin bst {
+  font-family: 'Big Shoulders Text', sans-serif;
+  font-weight: 400;
+}
+
+@mixin bst-18 {
+  @include bst;
+  font-size: 1.8rem;
+}
+
+@mixin center-x {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin center-y {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin center-xy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin kai {
+  font-family: kai, sans-serif;
+  font-weight: 400;
+}
+
+@mixin kai-12 {
+  @include kai;
+  font-size: 1.2rem;
+}
+
+@mixin kai-14 {
+  @include kai;
+  font-size: 1.4rem;
+}
+
+@mixin kai-18 {
+  @include kai;
+  font-size: 1.8rem;
+}
+
+@mixin kai-24 {
+  @include kai;
+  font-size: 2.4rem;
+}
+
+@mixin kai-32 {
+  @include kai;
+  font-size: 3.2rem;
+}
+
+@mixin kai-48 {
+  @include kai;
+  font-size: 4.8rem;
+}
+
+@mixin main-button {
+  display: block;
+  background: $rgb30;
+  border-radius: 3px;
+
+  a {
+    @include a;
+    display: block;
+    text-align: center;
+  }
+}
+
+@mixin main-button-big {
+  @include kai-18;
+  @include main-button;
+}
+
+@mixin main-button-medium {
+  @include kai-18;
+  @include main-button;
+}
+
+@mixin main-button-small {
+  @include kai-12;
+  @include main-button;
+}
+
+@mixin rob-con {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+}
+
+@mixin rob-con-12 {
+  @include rob-con;
+  font-size: 1.2rem;
+}
+
+@mixin rob-con-14 {
+  @include rob-con;
+  font-size: 1.4rem;
+}
+
+@mixin rob-con-18 {
+  @include rob-con;
+  font-size: 1.8rem;
+}
+
+@mixin rob-con-24 {
+  @include rob-con;
+  font-size: 2.4rem;
+}

@@ -1,0 +1,73 @@
+{{#if products}}
+  <div class="page__banner">
+    <h1 class="page__heading">Bag</h1>
+  </div>
+  <div class="bag">
+    <div class="items">
+      {{#each products}}
+        <div class="item">          
+          <a href="{{this.item.url}}"><img class="item__image" src="{{this.item.image}}" alt=""></a>
+          <div class="item__info">
+            <span class="item__name">{{this.item.name}}</span>
+            <ul class="item__attributes">
+              <li class="item__attribute">Color: Black</li>
+              <li class="item__attribute">Size: {{this.item.size}}</li>
+              <li class="item__attribute">QTY: {{this.qty}}</li>
+            </ul>
+            <span class="item__price">${{this.total}}</span>
+            <form class="counter__form" method="post">
+              <div class="counter__options">
+                <button class="counter__button" name="minusOne" formaction="/minus/{{this.item.sku}}">
+                  <span class="counter__plus-minus">-</span>
+                </button>
+                <input class="counter__input" id="count" type="number" name="count" value={{this.qty}} disabled>
+                <button class="counter__button" name="plusOne" formaction="/plus/{{this.item.sku}}">
+                  <span class="counter__plus-minus">+</span>
+                </button>
+              </div>
+            </form>
+            <form class="remove__form" action="/remove/{{this.item.sku}}" method="get">
+              <button class="remove__bin" name="remove"><i class="fas fa-trash"></i></button>
+            </form>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+    <div class="summary">
+      <div class="summary__line-item__tall"> 
+        <span class="summary__line-item__title">Summary</span>
+      </div>
+      <div class="summary__line-item__short summary__promo " id="js-summary__promo">
+        <span class="summary__line-item__type">Promo Code?</span><span class="summary__arrow" id="js-summary__arrow"></span>
+        <div id="promo-toggle" class="hide">
+          <form class="summary__promo-form" method="post" action="/promo">
+            <input class="summary__promo-input" type="text" name="promo">
+            <button class="summary__promo-button">APPLY</button>
+          </form>
+        </div>
+      </div>
+      <div class="summary__line-item__short">
+        <span class="summary__line-item__type">Subtotal</span>
+        <span class="summary__line-item__price">${{this.subtotal}}</span>
+      </div>
+      <div class="summary__line-item__short">
+        <span class="summary__line-item__type">Shipping</span>
+        <span class="summary__line-item__price">${{this.shipping}}</span>
+      </div>
+      <div class="summary__line-item__short">
+        <span class="summary__line-item__type">Total</span>
+        <span class="summary__line-item__price">${{this.total}}</span>
+      </div>
+      <div class="summary__line-item__tall">
+        <form class="checkout__form" action="/checkout" method="get">
+          <button class="checkout__button">Checkout</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{{else}}
+  <div class="prompt">
+    <h1 class="prompt__heading">Bag is empty.</h1>
+    <span class="prompt__message">Go to the <a class="a teal__link" href="/shop">Shop</a> or return <a class="a teal__link" href="/">Home</a>.</span>
+  </div>
+{{/if}}

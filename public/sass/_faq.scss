@@ -1,0 +1,59 @@
+.bar {
+  width: 100%;
+  height: 0.1rem;
+  margin-bottom: 3rem;
+  background: $rgb30;
+  opacity: 0.1;
+}
+
+.page__heading {
+  color: $rgb30;
+}
+
+.page__wrapper {
+  background: $rgb240;
+}
+
+.qa {
+  margin-bottom: 40rem;
+}
+
+.question {
+  @include kai-18;
+  margin-bottom: 1rem;
+}
+
+.section__p {
+  @include rob-con-14;
+}
+
+.section__heading {
+  @include kai-24;
+}
+
+.section__answer {
+  margin-bottom: 1rem;
+  line-height: 1.50;
+  letter-spacing: 0.025rem;
+}
+
+.section__qa {
+  @include rob-con-14;
+  margin: 5rem 0;
+}
+
+.section__question {
+  @include kai-18;
+  margin-bottom: 1rem;
+}
+
+// Rename
+.teal {
+  text-decoration: underline;
+}
+
+.wrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}

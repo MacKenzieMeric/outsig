@@ -1,0 +1,67 @@
+<div class="product">
+  {{#with product}}
+    <div class="product__spotlight">
+      <img class="product__image" id="js-product__image" src="{{image}}" alt="{{this.alt}}">
+      <div class="product__images-wrapper">
+        {{#each images}}
+          <img class="product__images" src={{this}} alt="{{this.alt}}">
+        {{/each}}
+      </div>
+    </div>
+    <div class="product__overview">
+      <div class="product__details">
+        <span class="product__category">{{category}}</span>
+        <h2 class="product__name">{{name}}</h2>
+        <span class="product__price">${{price}}</span>
+      </div>
+      <div class="product__sizes">
+        <h2 class="product__heading">Sizes</h2>
+        <form action="/add/{{tag}}" method="get">
+          <div class="sizes__selection">
+            <label class="product__label">
+              <input class="product__radio" type="radio" name="size" value="S">
+              <span class="product__size">S</span>
+            </label>
+            <label class="product__label">
+              <input class="product__radio" type="radio" name="size" value="M">
+              <span class="product__size">M</span>
+            </label>
+            <label class="product__label">
+              <input class="product__radio" type="radio" name="size" value="L">
+              <span class="product__size">L</span>
+            </label>
+            <label class="product__label">
+              <input class="product__radio" type="radio" name="size" value="XL">
+              <span class="product__size">XL</span>
+            </label>
+          </div>
+          <p id="notify">Please select a size.</p>
+          <div class="button__wrapper">
+            <button class="add__button" id="js-add__button">Add to Bag</button>
+            <div class="ghost" id="ghost"></div>
+          </div>
+        </form> 
+      </div>
+      <p class="product__description">{{description}}</p>
+    </div>
+  {{/with}}
+</div>
+{{#if update}}
+  <div class="card" id="js-card">
+    {{#with product}}
+      <div class="item-tile">
+        <div class="item-thumbnail">
+          <a href="/bag"><img class="thumbnail-image" src={{image}} alt=""></a>
+        </div>
+        <div class="order-info">
+          <span class="item-name">{{name}}</span>
+          <ul class="item-attributes">
+            <li>Color: Black</li>
+            <li>Size: {{size}}</li>
+          </ul>
+          <span class="item-price">${{this.price}}</span>
+        </div>
+      </div>
+    {{/with}}
+  </div>
+{{/if}}

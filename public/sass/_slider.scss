@@ -1,0 +1,58 @@
+.slide__button {
+  @include kai-18;
+  display: inline-block;
+  position: relative;
+  height: 4rem;
+  padding: 0 2.5rem;
+  line-height: 4rem;
+  border: 0.1rem solid black;
+  border-radius: 0.1rem;
+}
+
+.slide__button {
+  transform: translateZ(0);
+  &:before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    content: '';
+    opacity: 0.5;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: 200ms ease;
+  }
+  &:hover:before {
+    transform: scaleX(1);
+  }
+}
+
+.slide__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slide__subtitle {
+  @include kai-18;
+  padding-bottom: 2rem;
+}
+
+.slide__title {
+  @include kai-24;
+  margin-bottom: 2rem;
+}
+
+.slide__wrapper {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  cursor: pointer;
+}
